@@ -71,9 +71,10 @@ getNewQuestion = () => {
         if(response === 'success'){ alert('Submitting!'); }
         });
         setTimeout(function(){
-            window.location.href = end_url;
+            game.classList.add('hidden');
+            loader.classList.remove('hidden');
          }, 2000);
-        //return window.location.assign(end_url);
+        return window.location.assign(end_url);
     }
 
     questionCounter++;
