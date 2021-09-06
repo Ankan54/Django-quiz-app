@@ -1,0 +1,61 @@
+.login{
+        width: 400px;
+        overflow: hidden;
+        margin: auto;
+        margin: 10 0 0 450px;
+        padding: 30px;
+        padding-top: 50px;
+        background: #23463f;
+        border-radius: 15px ;
+        text-align:center;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+h2,h3{
+    text-align: center;
+    color: #23463f;
+    padding: 10px;
+}
+label{
+    color: #08ffd1;
+    font-size: 17px;
+}
+#Uname{
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#email{
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#Pass1{
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+#Pass2{
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+span{
+    color: white;
+    font-size: 17px;
+}
+input {
+    font-size:17px;
+}
+.blank{
+    height: 80px;
+}
