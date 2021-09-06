@@ -42,6 +42,7 @@ def log_game(request,id,difficulty):
         gl.save()
         print('saved')
     except Exception as e:
+        print('except',e)
         messages.error(request, 'Error: {}'.format(e))
         return False
 
