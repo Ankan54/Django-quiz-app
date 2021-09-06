@@ -35,6 +35,7 @@ def log_game(request,id,difficulty):
     topic_id = id
     level= difficulty
     date_time= datetime.strftime(datetime.today(), "%d-%m-%Y %H:%M:%S")
+    print(len(date_time))
     score= request.POST['score']
     try:
         print('before save')
