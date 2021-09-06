@@ -12,5 +12,5 @@ class Game_log(models.Model):
     topic = models.CharField(max_length=50)
     level = models.CharField(max_length=7)
     user_id = models.PositiveIntegerField()
-    datetime = models.CharField(max_length=14, default='N/A')
+    datetime = models.CharField(max_length=20, default='N/A')
     score = models.PositiveIntegerField()
