@@ -39,6 +39,7 @@ def log_game(request,id,difficulty):
     try:
         gl= Game_log(topic=topic_id, level=level, user_id= user_id, datetime=date_time,score=score)
         gl.save()
+        print('saved')
         return True
     except Exception as e:
         messages.error(request, 'Error: {}'.format(e))
