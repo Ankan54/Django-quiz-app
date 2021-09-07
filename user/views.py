@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
+from game.views import Game_log,Topic
 
 
 def user_register(request):
@@ -62,3 +63,19 @@ def user_logout(request):
     auth.logout(request)
     messages.success(request, 'You have been successfully logged out')
     return redirect('/')
+
+
+def user_game_history(request):
+    user_id = request.user.id
+    final_data= []
+    history_data= Game_log.objects.filter(user_id=user_id)
+    topics= [Topic.objects.get(id=hist.topic) for hist in history_data]
+    for i,hist in enumerate(history_data):
+        final_data.append({
+                    'i': i+1,
+                    'topic': topics[i].name,
+                    'level': hist.level,
+                    'score': hist.score,
+                    'date': hist.datetime
+        })
+    return render(request,'history.html',{'history_data': final_data[::-1]})

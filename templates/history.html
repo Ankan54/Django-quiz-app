@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="text-center">
+    <h2>Your Game History</h2>
+    <table class="table table-hover mt-10">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Topic</th>
+      <th scope="col">Difficulty</th>
+      <th scope="col">Score</th>
+      <th scope="col">Date & Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for hist in history_data %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ hist.topic }}</td>
+      <td>{{ hist.level }}</td>
+      <td>{{ hist.score }}</td>
+      <td>{{ hist.date }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}
