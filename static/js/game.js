@@ -70,11 +70,12 @@ getNewQuestion = () => {
         $.post(post_url, data, function(response){
         if(response === 'success'){ alert('Submitting!'); }
         });
+        game.classList.add('hidden');
+        loader.classList.remove('hidden');
         setTimeout(function(){
-            game.classList.add('hidden');
-            loader.classList.remove('hidden');
+            return window.location.assign(end_url);
          }, 2000);
-        return window.location.assign(end_url);
+
     }
 
     questionCounter++;
